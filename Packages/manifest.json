@@ -1,8 +1,21 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "2.5.4",
+    "com.studio23.ss2.audiosystem.fmod": "0.2.0",
+    "com.studio23.ss2.authsystem": "4.0.3",
+    "com.studio23.ss2.buttoniconresourcemanager": "2.0.9",
+    "com.studio23.ss2.creditssystem": "1.0.4",
+    "com.studio23.ss2.dialoguesystem": "0.4.7",
+    "com.studio23.ss2.loadingsystem": "1.0.9",
+    "com.studio23.ss2.savesystem": "2.1.9",
+    "com.studio23.ss2.settings.audio.fmod": "1.0.1",
+    "com.studio23.ss2.settings.control": "1.0.4",
+    "com.studio23.ss2.settings.video.urp": "1.0.2",
+    "com.studio23.ss2.settingsmanager": "0.0.10",
+    "com.studio23.ss2.splashscreensystem": "1.0.4",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.feature.development": "1.0.1",
-    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.textmeshpro": "3.0.8",
     "com.unity.timeline": "1.7.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
@@ -44,6 +57,16 @@
       "url": "https://package.openupm.com",
       "scopes": [
         "com.studio23"
+      ]
+    },
+    {
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp.unitask",
+        "com.needle.console-hyperlinks",
+        "com.github.siccity.xnode",
+        "com.textus-games.serialized-reference-ui"
       ]
     }
   ]

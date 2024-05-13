@@ -1,0 +1,17 @@
+{
+    "name": "com.gdcbd.bossbattle",
+    "rootNamespace": "",
+    "references": [
+        "GUID:aa10aabc5f58de74aae8f86d48f8c57f",
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
