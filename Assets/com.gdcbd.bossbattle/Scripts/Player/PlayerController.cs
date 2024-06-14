@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace BossBattle
@@ -6,6 +7,9 @@ namespace BossBattle
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private PlayerProfile _profile;
+        [SerializeField] private PlayerGunController _playerGunController;
+        [SerializeField] private Transform _body;
+        
         private Rigidbody2D _rigidbody;
         private CapsuleCollider2D _colider;
         private InputManager _input;
@@ -15,6 +19,17 @@ namespace BossBattle
         private bool _isReadyToJump;  
         private bool _isInSprint;
         private bool _isInFire;
+        private bool _isDashing;
+        
+        private bool _cachedQueryStartInColliders; // ignore itself collision
+       
+        private float _time;
+        private float _timeJumpStart;
+       
+        private float _inAirTime = float.MinValue;
+        private float _dashTime;
+        private bool _bufferedJumpUsable;
+        private bool _coyoteUsable;
         
 #if UNITY_EDITOR
         private void OnValidate()
@@ -35,6 +50,7 @@ namespace BossBattle
                 _input.SprintReleasedAction += OnSprintReleased;
                 _input.FirePressedAction += OnFirePressed;
                 _input.FireReleasedAction += OnFireReleased;
+                _input.DashPressedAction += OnDashPressed;
             }
         }
 
@@ -47,33 +63,88 @@ namespace BossBattle
                 _input.SprintReleasedAction -= OnSprintReleased;
                 _input.FirePressedAction -= OnFirePressed;
                 _input.FireReleasedAction -= OnFireReleased;
+                _input.DashPressedAction -= OnDashPressed;
             }
         }
-        private void OnJumpPressed() =>_isReadyToJump = true;
+        #endregion
+        private void OnJumpPressed()
+        {
+            _isReadyToJump = true;
+            _timeJumpStart = _time;
+        }
         private void OnSprintPressed() => _isInSprint = true;
 
         private void OnSprintReleased() => _isInSprint = false;
 
-        private void OnFirePressed() => _isInFire = true;
+        private void OnFirePressed()
+        {
+            _playerGunController.Fire();
+            _isInFire = true;
+        }
         private void OnFireReleased()  => _isInFire = false;
         
-
-        #endregion
+        private void OnDashPressed()
+        {
+            if (_isGrounded)
+            {
+                _isDashing = true;
+                _dashTime = _time;
+                var _dashDirection = Mathf.Sign(_input.Move().x); // dash will be in player forward
+                _velocity.x = _dashDirection * _profile.DashSpeed;
+            }
+        }
+        
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _colider = GetComponent<CapsuleCollider2D>();
+            _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+        }
+
+        private void Update()
+        {
+            _time += Time.deltaTime;
         }
 
         private void FixedUpdate()
         {
-            DetectGround();
-            HandleJump();
-            HandleMovement();
-            HandleGravity();
+            if (_isDashing)
+            {
+                CheckDash();
+            }
+            else
+            {
+                DetectGround();
+                HandleJump();
+                HandleMovement();
+                HandleGravity();
+                FlipSprite(); 
+            }
             ApplyForce();
+            
+           
         }
+        private void FlipSprite()
+        {
+            if (_input.Move().x > 0 && _body.localScale.x < 0)
+            {
+                _body.localScale = new Vector3(1, 1, 1);
+            }
+            else if (_input.Move().x < 0 && _body.localScale.x > 0)
+            {
+                _body.localScale = new Vector3(-1, 1, 1);
+            }
+        }
+
+        private void CheckDash()
+        {
+            if (_time - _dashTime > _profile.DashDuration)
+            {
+                _isDashing = false;
+            }
+        }
+
         private void ApplyForce()=> _rigidbody.velocity = _velocity;
         
         #region Collisions
@@ -93,9 +164,18 @@ namespace BossBattle
 
             // Landed on the Ground
             if (!_isGrounded && groundHit)
+            {
                 _isGrounded = true;
-            // Left the Ground
-            else if (_isGrounded && !groundHit) _isGrounded = false;
+                _bufferedJumpUsable = true;
+                _coyoteUsable = true;
+            }
+            else if (_isGrounded && !groundHit)  // Left the Ground
+            {
+                _isGrounded = false;
+                _inAirTime = _time;
+            }
+            
+            Physics2D.queriesStartInColliders = _cachedQueryStartInColliders;
         }
 
         #endregion
@@ -104,14 +184,17 @@ namespace BossBattle
         #region Jumping
         private void HandleJump()
         {
-            if (!_isReadyToJump) return;
-            if (_isGrounded) ExecuteJump();
+            if (!_isReadyToJump && !HasBufferedJump) return;
+            if (_isGrounded || CanUseCoyote) ExecuteJump();
             _isReadyToJump = false;
         }
 
         private void ExecuteJump()
         {
             _velocity.y = _profile.JumpPower;
+            _timeJumpStart = 0;
+            _bufferedJumpUsable = false;
+            _coyoteUsable = false;
         }
 
         #endregion
@@ -126,7 +209,7 @@ namespace BossBattle
             }
             else
             {
-                _velocity.x = Mathf.MoveTowards(_velocity.x, _input.Move().x * _profile.MaxSpeed * (_isInSprint? 2: 1), _profile.Acceleration * Time.fixedDeltaTime);
+                _velocity.x = Mathf.MoveTowards(_velocity.x, _input.Move().x *  (_isInSprint? _profile.SprintSpeed : _profile.MaxSpeed ), _profile.Acceleration * Time.fixedDeltaTime);
             }
         }
 
@@ -151,6 +234,7 @@ namespace BossBattle
 
         #endregion
 
-      
+        private bool HasBufferedJump => _bufferedJumpUsable && _time < _timeJumpStart + _profile.JumpBuffer;
+        private bool CanUseCoyote => _coyoteUsable && !_isGrounded && _time < _inAirTime + _profile.CoyoteTime;
     }
 }

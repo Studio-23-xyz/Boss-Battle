@@ -20,6 +20,9 @@ public class InputManager : PersistentMonoSingleton<InputManager>
    
     public OnActionEvent FirePressedAction;
     public OnActionEvent FireReleasedAction;
+    
+    public OnActionEvent DashPressedAction;
+    public OnActionEvent DashReleasedAction;
     protected override void Initialize()
     {
     }
@@ -55,5 +58,11 @@ public class InputManager : PersistentMonoSingleton<InputManager>
             FireReleasedAction?.Invoke();
     }
 
-    
+    public void OnDashAction(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            DashPressedAction?.Invoke();
+        else if (context.canceled)
+            DashReleasedAction?.Invoke();
+    }
 }

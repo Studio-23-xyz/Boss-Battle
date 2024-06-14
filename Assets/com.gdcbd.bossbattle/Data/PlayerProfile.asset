@@ -16,6 +16,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   MaxSpeed: 14
+  SprintSpeed: 21
   Acceleration: 120
   GroundDeceleration: 60
   AirDeceleration: 30
@@ -24,3 +25,7 @@ MonoBehaviour:
   JumpPower: 36
   MaxFallSpeed: 40
   FallAcceleration: 110
+  CoyoteTime: 0.15
+  JumpBuffer: 0.2
+  DashSpeed: 40
+  DashDuration: 0.1

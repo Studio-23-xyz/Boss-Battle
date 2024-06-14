@@ -12,7 +12,9 @@ namespace BossBattle
         // MOVEMENT
         [Tooltip("Max speed")]
         public float MaxSpeed = 14;
-
+        [Tooltip("Max speed")]
+        public float SprintSpeed = 21;
+        
         [Tooltip("Acceleration")]
         public float Acceleration = 120;
 
@@ -37,5 +39,11 @@ namespace BossBattle
 
         [Tooltip("Fall acceleration")]
         public float FallAcceleration = 110;
+       
+        public float CoyoteTime = .15f;
+        public float JumpBuffer = .2f;
+       
+        public float DashSpeed =  50f; // Speed during dash
+        public float DashDuration = 0.2f; // Duration of the dash
     }
 }
