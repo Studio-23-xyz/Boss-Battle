@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace BossBattle
 {
@@ -7,8 +8,8 @@ namespace BossBattle
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private PlayerProfile _profile;
-        [SerializeField] private PlayerGunController _playerGunController;
-        [SerializeField] private Transform _body;
+        [FormerlySerializedAs("_playerGunController")] [SerializeField] private PlayerGunManager playerGunManager;
+        [SerializeField] private Transform _gunTransform;
         
         private Rigidbody2D _rigidbody;
         private CapsuleCollider2D _colider;
@@ -20,6 +21,8 @@ namespace BossBattle
         private bool _isInSprint;
         private bool _isInFire;
         private bool _isDashing;
+        private bool _isInCrouch;
+        private bool _isStartedMoving;
         
         private bool _cachedQueryStartInColliders; // ignore itself collision
        
@@ -51,9 +54,12 @@ namespace BossBattle
                 _input.FirePressedAction += OnFirePressed;
                 _input.FireReleasedAction += OnFireReleased;
                 _input.DashPressedAction += OnDashPressed;
+                _input.CrouchPressedAction += OnCrouchPressed;
+                _input.CrouchReleasedAction += OnCrouchReleased;
+                _input.MovePressedAction += OnMovePressed;
+                _input.MoveReleaseAction += OnMoveReleased;
             }
         }
-
         private void OnDisable()
         {
             if (_input != null)
@@ -64,6 +70,10 @@ namespace BossBattle
                 _input.FirePressedAction -= OnFirePressed;
                 _input.FireReleasedAction -= OnFireReleased;
                 _input.DashPressedAction -= OnDashPressed;
+                _input.CrouchPressedAction -= OnCrouchPressed;
+                _input.CrouchReleasedAction -= OnCrouchReleased;
+                _input.MovePressedAction -= OnMovePressed;
+                _input.MoveReleaseAction -= OnMoveReleased;
             }
         }
         #endregion
@@ -78,7 +88,7 @@ namespace BossBattle
 
         private void OnFirePressed()
         {
-            _playerGunController.Fire();
+            playerGunManager.Fire();
             _isInFire = true;
         }
         private void OnFireReleased()  => _isInFire = false;
@@ -89,11 +99,22 @@ namespace BossBattle
             {
                 _isDashing = true;
                 _dashTime = _time;
-                var _dashDirection = Mathf.Sign(_input.Move().x); // dash will be in player forward
+                var _dashDirection = Mathf.Sign(_input.Move().x); // TODO: dash will be in player forward
                 _velocity.x = _dashDirection * _profile.DashSpeed;
             }
         }
+
+        private void OnMovePressed() => _isStartedMoving = true;
+        private void OnMoveReleased()
+        {
+            
+        }
+
         
+        private void OnCrouchPressed() => _isInCrouch = true;
+        private void OnCrouchReleased() => _isInCrouch = false ;
+
+       
 
         private void Awake()
         {
@@ -127,13 +148,13 @@ namespace BossBattle
         }
         private void FlipSprite()
         {
-            if (_input.Move().x > 0 && _body.localScale.x < 0)
+            if (_input.Move().x > 0 && _gunTransform.localScale.x < 0)
             {
-                _body.localScale = new Vector3(1, 1, 1);
+                _gunTransform.localScale = new Vector3(1, 1, 1);
             }
-            else if (_input.Move().x < 0 && _body.localScale.x > 0)
+            else if (_input.Move().x < 0 && _gunTransform.localScale.x > 0)
             {
-                _body.localScale = new Vector3(-1, 1, 1);
+                _gunTransform.localScale = new Vector3(-1, 1, 1);
             }
         }
 

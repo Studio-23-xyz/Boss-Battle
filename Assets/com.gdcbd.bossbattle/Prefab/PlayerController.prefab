@@ -159,9 +159,9 @@ GameObject:
   - component: {fileID: 3194560385079180347}
   - component: {fileID: 2357009092445897188}
   - component: {fileID: 1230784532254378559}
+  - component: {fileID: 2882092221512063454}
   - component: {fileID: 6201555585310549877}
   - component: {fileID: 2442870124512028638}
-  - component: {fileID: 2882092221512063454}
   m_Layer: 6
   m_Name: PlayerController
   m_TagString: Player
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _profile: {fileID: 11400000, guid: 5f55139c6e34e4463b2c499df70f3e63, type: 2}
   _playerGunController: {fileID: 2882092221512063454}
-  _body: {fileID: 1973357628624749824}
+  _gunTransform: {fileID: 1973357628624749824}
 --- !u!114 &1230784532254378559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +213,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1605732898262895091}
+--- !u!114 &2882092221512063454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608358493655358176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0304ed49cc9648978d5fdae617e4a67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gun: {fileID: 11400000, guid: e3d19a4318be64547a3067b0fa55a7b8, type: 2}
 --- !u!50 &6201555585310549877
 Rigidbody2D:
   serializedVersion: 4
@@ -277,21 +290,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.61}
   m_Size: {x: 0.7, y: 1.25}
   m_Direction: 0
---- !u!114 &2882092221512063454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608358493655358176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0304ed49cc9648978d5fdae617e4a67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileController: {fileID: 4435100651049968469, guid: 74a0726c2900d4be699cc9db27a9f2d4, type: 3}
-  firePoint: {fileID: 354354920386230836}
-  _body: {fileID: 1973357628624749824}
 --- !u!1 &1611828232217576190
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973357628624749824}
   m_Layer: 6
-  m_Name: Body
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,7 +454,7 @@ GameObject:
   - component: {fileID: 354354920386230836}
   - component: {fileID: 8219732820515720975}
   m_Layer: 6
-  m_Name: Gun
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
