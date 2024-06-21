@@ -1,0 +1,28 @@
+name: Meta Check On PR
+on: 
+  pull_request:
+    branches:
+      - main
+permissions:
+    contents: read
+    checks: write
+    id-token: write
+
+jobs:
+  unity-meta-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: DeNA/unity-meta-check@v4.0.0
+        with:
+          enable_junit: true
+          junit_xml_path: meta_report.xml
+        env:
+          GITHUB_TOKEN: "${{ secrets.PAT }}"
+
+
+      - name: Meta Checker Report 📄
+        uses: mikepenz/action-junit-report@v2
+        with:
+          report_paths: meta_report.xml
+        if: always()
