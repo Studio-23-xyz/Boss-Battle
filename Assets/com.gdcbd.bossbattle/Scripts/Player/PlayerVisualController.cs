@@ -1,29 +1,30 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class PlayerVisualController : MonoBehaviour
+namespace com.gdcbd.bossbattle.player
 {
-   [SerializeField] private SpriteRenderer spriteRenderer;
-    private Color originalColor;
-    private void Start()
+    public class PlayerVisualController : MonoBehaviour
     {
-        
-        originalColor = spriteRenderer.color;
-    }
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        private Color originalColor;
 
-    public void Dead()
-    {
-        spriteRenderer.DOColor(Color.red, 0.1f).OnComplete(() =>
+        private void Start()
         {
-            spriteRenderer.DOColor(originalColor, 0.1f);
-        });
-    }
-    
-    public void PowerUP()
-    {
-        spriteRenderer.DOColor(Color.green, 0.1f).OnComplete(() =>
+
+            originalColor = spriteRenderer.color;
+        }
+
+        public void Dead()
         {
-            spriteRenderer.DOColor(originalColor, 0.1f);
-        });
+            spriteRenderer.DOColor(Color.red, 0.1f).OnComplete(() => { spriteRenderer.DOColor(originalColor, 0.1f); });
+        }
+
+        public void PowerUP()
+        {
+            spriteRenderer.DOColor(Color.green, 0.1f).OnComplete(() =>
+            {
+                spriteRenderer.DOColor(originalColor, 0.1f);
+            });
+        }
     }
 }

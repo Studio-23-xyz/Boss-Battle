@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BossBattle
+namespace com.gdcbd.bossbattle.player
 {
     [CreateAssetMenu(fileName = "New Player Profile", menuName = "BossBattle/PlayerProfile", order = 0)]
     public class PlayerProfile : ScriptableObject

@@ -1,8 +1,9 @@
 using System;
+using com.gdcbd.bossbattle.player;
 using DG.Tweening;
 using UnityEngine;
 
-namespace BossBattle.Utility
+namespace com.gdcbd.bossbattle.utility
 {
     public class ParryObjectController2 : MonoBehaviour
     {

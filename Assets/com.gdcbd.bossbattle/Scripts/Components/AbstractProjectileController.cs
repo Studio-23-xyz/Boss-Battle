@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.gdcbd.bossbattle.Scripts.Components
+namespace com.gdcbd.bossbattle.components
 {
     public abstract class AbstractProjectileController : ScriptableObject
     {

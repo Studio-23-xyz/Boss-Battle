@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BossBattle.Utility
+namespace com.gdcbd.bossbattle.utility
 {
     public abstract class PersistentMonoSingleton<T> : MonoBehaviour where T : Component
     {

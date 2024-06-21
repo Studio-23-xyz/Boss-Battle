@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-namespace com.gdcbd.bossbattle.Scripts.Components
+namespace com.gdcbd.bossbattle.components
 {
     [CreateAssetMenu(fileName = "NewProjectileController", menuName = "BossBattle/ProjectileController")]
     public class ProjectileController : AbstractProjectileController
@@ -18,15 +18,20 @@ namespace com.gdcbd.bossbattle.Scripts.Components
         {
             if (_projectilePrefab != null)
             {
-                GameObject projectileInstance = Instantiate(_projectilePrefab,  shootInfo.startTransform);
-                projectileInstance.transform.parent = null;
-                Rigidbody2D rb = projectileInstance.GetComponent<Rigidbody2D>();
-                if (rb != null)
+                GameObject projectile = ObjectPoolManager.Instance.GetPooledObject(_projectilePrefab);
+                if (projectile != null)
                 {
-                  //  rb.linearVelocity = Vector2.forward * _speed;
-                  rb.velocity = shootInfo.directon * _speed;
+                    projectile.transform.position = shootInfo.startTransform.position;
+                    projectile.transform.rotation = shootInfo.startTransform.rotation;
+                    projectile.SetActive(true);
+                    // projectile.transform.parent = null;
+                    ProjectileBehaviour pb = projectile.GetComponent<ProjectileBehaviour>(); // TODO : can get projectile behaviour to move projectile
+                    if (pb != null)
+                    {
+                        pb.AddThrust(shootInfo.directon * _speed);
+                       
+                    }
                 }
-                
             }
         }
         

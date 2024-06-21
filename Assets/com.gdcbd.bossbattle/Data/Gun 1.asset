@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gun 1
   m_EditorClassIdentifier: 
   _gunPrefab: {fileID: 7252581455397248090, guid: a9d4a71d420814da4b69a9a26903e113, type: 3}
-  projectile: {fileID: 11400000, guid: 7dc117f3be24441a99e5a974e27301f1, type: 2}
-  ammoCount: 8
-  magazineSize: 20
-  fireRate: 0.1
+  _projectile: {fileID: 11400000, guid: 7dc117f3be24441a99e5a974e27301f1, type: 2}
+  _ammoCount: 2
+  _magazineSize: 7
+  _fireRate: 50

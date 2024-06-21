@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-namespace BossBattle
+namespace com.gdcbd.bossbattle
 {
     public class CameraManager : MonoBehaviour
     {

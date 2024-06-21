@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace BossBattle
+namespace com.gdcbd.bossbattle.player
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour
@@ -26,7 +26,7 @@ namespace BossBattle
         
         private bool _cachedQueryStartInColliders; // ignore itself collision
        
-        private float _time;
+        private float _time => TimeManager.Instance.TimeCount();
         private float _timeJumpStart;
        
         private float _inAirTime = float.MinValue;
@@ -121,11 +121,8 @@ namespace BossBattle
             _rigidbody = GetComponent<Rigidbody2D>();
             _colider = GetComponent<CapsuleCollider2D>();
             _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
-        }
-
-        private void Update()
-        {
-            _time += Time.deltaTime;
+            
+           
         }
 
         private void FixedUpdate()

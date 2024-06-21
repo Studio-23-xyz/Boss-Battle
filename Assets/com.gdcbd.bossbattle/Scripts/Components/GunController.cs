@@ -1,41 +1,39 @@
+using System;
+using com.gdcbd.bossbattle;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace com.gdcbd.bossbattle.Scripts.Components
+namespace com.gdcbd.bossbattle.components
 {
-    public class ShootInfo
-    {
-        public ShootInfo(Transform startTransform, Vector2 directon)
-        {
-            this.startTransform = startTransform;
-            this.directon = directon;
-        }
-
-        public Transform startTransform;
-        public Vector2 directon;
-    }
+    
     [CreateAssetMenu(fileName = "NewGunController", menuName = "BossBattle/GunController")]
     public class GunController : AbstractGunController
     {
         public GameObject _gunPrefab;
        
-        public ProjectileController projectile;
-        public int ammoCount;
-        public int magazineSize;
-        public float fireRate;
+         [SerializeField] private ProjectileController _projectile;
+        [SerializeField] private int _ammoCount = 0;
+        [SerializeField] private int _magazineSize = 7;
+       [SerializeField] private float _fireRate = 0.2f;
        
 
-        private float nextFireTime;
-        
+        private float _nextFireTime;
+
+        public void Reset()
+        {
+            _nextFireTime = 0;
+        }
+        private float _time => TimeManager.Instance.TimeCount();
         public override void Shoot(ShootInfo shootInfo)
         {
            
-            if ( ammoCount > 0)
+            if (_time > _nextFireTime && _ammoCount > 0)
             {
-                ammoCount--;
-                nextFireTime = Time.time + 1f / fireRate;
-                projectile.Launch(shootInfo);
+                _ammoCount--;
+                _nextFireTime = _time + 1f / _fireRate;
+                _projectile.Launch(shootInfo);
             }
-            else if (ammoCount <= 0)
+            else if (_ammoCount <= 0)
             {
                 Reload();
             }
@@ -43,7 +41,7 @@ namespace com.gdcbd.bossbattle.Scripts.Components
 
         public override void Reload()
         {
-            ammoCount = magazineSize;
+            _ammoCount = _magazineSize;
         }
         
     }

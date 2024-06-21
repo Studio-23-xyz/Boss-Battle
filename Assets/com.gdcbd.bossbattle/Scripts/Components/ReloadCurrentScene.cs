@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BossBattle.Utility
+namespace com.gdcbd.bossbattle.components
 {
     public class ReloadScene : MonoBehaviour
     {
