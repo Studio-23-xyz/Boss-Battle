@@ -5,15 +5,18 @@ using UnityEngine;
 
 namespace com.gdcbd.bossbattle.utility
 {
-    public class ParryObjectController2 : MonoBehaviour
+    public class DummyParryCoin : MonoBehaviour
     {
         private Collider2D objectCollider;
         private Rigidbody2D rigidbody2D;
-
+        
+        public float duration = 1f;
+        public bool isRotated;
         private void Start()
         {
             objectCollider = GetComponent<Collider2D>();
             rigidbody2D = GetComponent<Rigidbody2D>();
+            if(isRotated) ScaleToNegative();
         }
 
         private void OnCollisionEnter2D(Collision2D other)
@@ -25,7 +28,7 @@ namespace com.gdcbd.bossbattle.utility
 
                 if (collisionDirection == Vector2.up)
                 {
-                    DOVirtual.DelayedCall(0.1f, () =>
+                    DOVirtual.DelayedCall(0.2f, () =>
                     {
                         objectCollider.enabled = false;
                         transform.DOScale(Vector3.zero, 1.0f).OnComplete(() =>
@@ -38,7 +41,7 @@ namespace com.gdcbd.bossbattle.utility
                 else
                 {
                     rigidbody2D.isKinematic = false;
-                    other.gameObject.GetComponent<PlayerVisualController>().Dead();
+                    other.gameObject.GetComponent<PlayerVisualController>().Hurt();
                 }
             }else if (other.gameObject.CompareTag("Projectile"))
             {
@@ -53,5 +56,16 @@ namespace com.gdcbd.bossbattle.utility
 
             return collisionNormal.y < 0 ? Vector2.up : Vector2.down;
         }
+        
+        void ScaleToNegative()
+        {
+            transform.DOScale(new Vector3(-1, 1, 1), duration).SetEase(Ease.InOutQuad).OnComplete(ScaleToPositive);
+        }
+
+        void ScaleToPositive()
+        {
+            transform.DOScale(new Vector3(1, 1, 1), duration).SetEase(Ease.InOutQuad).OnComplete(ScaleToNegative);
+        }
+        
     }
 }

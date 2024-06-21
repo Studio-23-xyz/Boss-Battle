@@ -24,6 +24,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "f9dc1fcd-66cf-408b-b3e7-8c74fa0020e0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "b5acf249-f8f5-4990-a016-cfb3a5c5f472",
@@ -253,7 +262,7 @@
                 {
                     "name": "",
                     "id": "666df747-3314-4b63-ab7e-f744a590cdd0",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -264,7 +273,7 @@
                 {
                     "name": "",
                     "id": "bf18969d-13b7-449e-b625-67af0dcb5ecc",
-                    "path": "<Keyboard>/leftShift",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse;Keyboard&Mouse",
@@ -274,12 +283,23 @@
                 },
                 {
                     "name": "",
-                    "id": "60c3ac51-f657-4195-8312-26923668f154",
+                    "id": "65904987-74e7-4eab-a1b0-428d441255c0",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse;Keyboard&Mouse",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88afe0df-8e07-42c7-806b-ce79619d760d",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Sprint",
+                    "action": "Crouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
