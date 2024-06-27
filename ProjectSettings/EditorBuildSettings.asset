@@ -5,8 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/com.gdcbd.bossbattle/Scenes/Boss 1 Scene.unity
     guid: f86b8c7fabff84c6b914d39788753df3
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 6c306bb9c58f94c7abae4869910f5e5a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ea6af263b48f14eee9726bf2edd6e09e, type: 3}
