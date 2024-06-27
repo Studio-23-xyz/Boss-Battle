@@ -18,6 +18,7 @@ namespace com.gdcbd.bossbattle.components
         {
             if (_projectilePrefab != null)
             {
+
                 GameObject projectile = ProjectileSpawner.Instance.Pool.Get(); //ObjectPoolManager.Instance.GetPooledObject(_projectilePrefab);
                 
                 if (projectile != null)
