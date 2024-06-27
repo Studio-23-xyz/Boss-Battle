@@ -3,7 +3,7 @@ using UnityEngine.Pool;
 
 namespace com.gdcbd.bossbattle.components
 {
-    public class ProjectilePool : MonoBehaviour
+    public class PoolObject : MonoBehaviour
     {
         public IObjectPool<GameObject> pool;
 
