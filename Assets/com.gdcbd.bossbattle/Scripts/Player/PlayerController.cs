@@ -6,16 +6,16 @@ namespace com.gdcbd.bossbattle.player
     [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private PlayerHealth Health;
+        [SerializeField] private PlayerProfile profile;
 
         [SerializeField]  private PlayerGunManager playerGunManager;
         [SerializeField] private PlayerVisualController _playerVisualController;
         [SerializeField] private Transform _gunTransform;
-
+        private InputManager _input;
+        
         private Rigidbody2D _rigidbody;
         private CapsuleCollider2D _colider;
-        private InputManager _input;
-
+        // Internal variable to precess player controller data on runtime
         private Vector2 _velocity;
         private bool _isGrounded;
         private bool _isReadyToJump;
@@ -40,7 +40,12 @@ namespace com.gdcbd.bossbattle.player
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            if (Health == null) Debug.LogWarning("Player profile not found!", this);
+            if (profile == null) 
+                Debug.LogWarning("Player profile not found!", this);
+            if (profile.Health == null) 
+                Debug.LogWarning("Player health not found!", this);
+            
+            
         }
 #endif
 
@@ -109,12 +114,12 @@ namespace com.gdcbd.bossbattle.player
 
         private void OnDashPressed()
         {
-            if (_dashCount >= Health.MaxDashInAir) return;
+            if (_dashCount >= profile.MaxDashInAir) return;
             
             _isDashing = true;
             _dashTime = _time;
             var _dashDirection = Mathf.Sign(_input.Move().x); // TODO: dash will be in player forward
-            _velocity.x = _dashDirection * Health.DashSpeed;
+            _velocity.x = _dashDirection * profile.DashSpeed;
             _dashCount++;    
             
         }
@@ -165,7 +170,7 @@ namespace com.gdcbd.bossbattle.player
 
         private void CheckDash()
         {
-            if (_time - _dashTime > Health.DashDuration) _isDashing = false;
+            if (_time - _dashTime > profile.DashDuration) _isDashing = false;
         }
 
         private void FlipSprite()
@@ -191,9 +196,9 @@ namespace com.gdcbd.bossbattle.player
 
             // Ground and Ceiling
             bool groundHit = Physics2D.CapsuleCast(_colider.bounds.center, _colider.size, _colider.direction, 0,
-                Vector2.down, Health.GrounderDistance, ~Health.PlayerLayer);
+                Vector2.down, profile.GrounderDistance, ~profile.PlayerLayer);
             bool ceilingHit = Physics2D.CapsuleCast(_colider.bounds.center, _colider.size, _colider.direction, 0,
-                Vector2.up, Health.GrounderDistance, ~Health.PlayerLayer);
+                Vector2.up, profile.GrounderDistance, ~profile.PlayerLayer);
 
             // Hit a Ceiling
             if (ceilingHit) _velocity.y = Mathf.Min(0, _velocity.y);
@@ -224,13 +229,13 @@ namespace com.gdcbd.bossbattle.player
         private void HandleJump()
         {
             if (!_isReadyToJump && !HasBufferedJump) return;
-            if (_isGrounded || CanUseCoyote || _jumpCount < Health.MaxJumpInAir) ExecuteJump();
+            if (_isGrounded || CanUseCoyote || _jumpCount < profile.MaxJumpInAir) ExecuteJump();
             _isReadyToJump = false;
         }
 
         private void ExecuteJump()
         {
-            _velocity.y = Health.JumpPower;
+            _velocity.y = profile.JumpPower;
             _timeJumpStart = 0;
             _bufferedJumpUsable = false;
             _coyoteUsable = false;
@@ -245,16 +250,16 @@ namespace com.gdcbd.bossbattle.player
         {
             if (_input.Move().x == 0)
             {
-                var deceleration = _isGrounded ? Health.GroundDeceleration : Health.AirDeceleration;
+                var deceleration = _isGrounded ? profile.GroundDeceleration : profile.AirDeceleration;
                 _velocity.x = Mathf.MoveTowards(_velocity.x, 0, deceleration * Time.fixedDeltaTime);
             }
             else
             {
                 _velocity.x = Mathf.MoveTowards(
                     _velocity.x,
-                    _input.Move().x * (_isInCrouch ? Health.CrouchSpeed :
-                        _isInSprint ? Health.SprintSpeed : Health.Speed),
-                    Health.Acceleration * Time.fixedDeltaTime
+                    _input.Move().x * (_isInCrouch ? profile.CrouchSpeed :
+                        _isInSprint ? profile.SprintSpeed : profile.Speed),
+                    profile.Acceleration * Time.fixedDeltaTime
                 );
             }
         }
@@ -267,13 +272,13 @@ namespace com.gdcbd.bossbattle.player
         {
             if (_isGrounded && _velocity.y <= 0f)
             {
-                _velocity.y = Health.GroundingForce;
+                _velocity.y = profile.GroundingForce;
             }
             else
             {
-                var airGravity = Health.FallAcceleration;
+                var airGravity = profile.FallAcceleration;
 
-                _velocity.y = Mathf.MoveTowards(_velocity.y, -Health.MaxFallSpeed,
+                _velocity.y = Mathf.MoveTowards(_velocity.y, -profile.MaxFallSpeed,
                     airGravity * Time.fixedDeltaTime);
             }
         }
@@ -292,7 +297,7 @@ namespace com.gdcbd.bossbattle.player
             _playerVisualController.StandUp();
         }
         #endregion
-        private bool HasBufferedJump => _bufferedJumpUsable && _time < _timeJumpStart + Health.JumpBuffer;
-        private bool CanUseCoyote => _coyoteUsable && !_isGrounded && _time < _inAirTimeStamp + Health.CoyoteTime;
+        private bool HasBufferedJump => _bufferedJumpUsable && _time < _timeJumpStart + profile.JumpBuffer;
+        private bool CanUseCoyote => _coyoteUsable && !_isGrounded && _time < _inAirTimeStamp + profile.CoyoteTime;
     }
 }

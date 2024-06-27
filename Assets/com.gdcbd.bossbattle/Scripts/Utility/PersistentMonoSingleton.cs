@@ -6,7 +6,7 @@ namespace com.gdcbd.bossbattle.utility
     {
         private static T _instance;
         private static readonly object _lock = new object();
-        private static bool _applicationIsQuitting = false;
+        private static bool _applicationIsQuitting ;
 
         public static T Instance
         {
@@ -21,7 +21,7 @@ namespace com.gdcbd.bossbattle.utility
                 lock (_lock)
                 {
                     if (_instance == null)
-                    {
+                    { 
                         _instance = FindObjectOfType<T>();
                         if (_instance == null)
                         {

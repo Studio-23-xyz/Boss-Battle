@@ -14,21 +14,22 @@ namespace com.gdcbd.bossbattle.components
        
         
        
-        public override void Launch(ShootInfo shootInfo)
+        public override void LaunchWith(ShootInfo shootInfo)
         {
             if (_projectilePrefab != null)
             {
-                GameObject projectile = ObjectPoolManager.Instance.GetPooledObject(_projectilePrefab);
+                GameObject projectile = ProjectileSpawner.Instance.Pool.Get(); //ObjectPoolManager.Instance.GetPooledObject(_projectilePrefab);
+                
                 if (projectile != null)
                 {
-                    projectile.transform.position = shootInfo.startTransform.position;
-                    projectile.transform.rotation = shootInfo.startTransform.rotation;
-                    projectile.SetActive(true);
+                    projectile.transform.position = shootInfo.StartTransform.position;
+                    projectile.transform.rotation = shootInfo.StartTransform.rotation;
+                    // projectile.SetActive(true);
                     // projectile.transform.parent = null;
                     ProjectileBehaviour pb = projectile.GetComponent<ProjectileBehaviour>(); // TODO : can get projectile behaviour to move projectile
                     if (pb != null)
                     {
-                        pb.AddThrust(shootInfo.directon * _speed);
+                        pb.AddThrust(shootInfo.Directon * _speed);
                        
                     }
                 }

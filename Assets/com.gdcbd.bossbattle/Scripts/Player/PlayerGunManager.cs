@@ -17,7 +17,7 @@ namespace com.gdcbd.bossbattle.player
 
         public void SetupGun()
         {
-            var visibleGun = Instantiate(_sampleGun1._gunPrefab, _playerGunContainer);
+            var visibleGun = Instantiate(_sampleGun1.GunPrefab, _playerGunContainer);
             _sampleGun1.Reset();
             _turretTransform = visibleGun.transform.Find("Turret");
 

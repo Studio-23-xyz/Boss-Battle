@@ -6,11 +6,11 @@ namespace com.gdcbd.bossbattle.components
     {
         public ShootInfo(Transform startTransform, Vector2 directon)
         {
-            this.startTransform = startTransform;
-            this.directon = directon;
+            StartTransform = startTransform;
+            Directon = directon;
         }
-        public Transform startTransform;
-        public Vector2 directon;
+        public Transform StartTransform;
+        public Vector2 Directon;
     }
     public abstract class AbstractGunController : ScriptableObject
     {

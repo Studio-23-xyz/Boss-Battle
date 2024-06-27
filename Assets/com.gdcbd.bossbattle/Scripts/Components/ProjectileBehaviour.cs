@@ -45,6 +45,7 @@ namespace com.gdcbd.bossbattle.components
         {
             AddThrust(Vector2.zero);
             gameObject.SetActive(false);  
+           
             
         }
     }
