@@ -1,14 +1,13 @@
+using com.gdcbd.bossbattle.components;
 using com.gdcbd.bossbattle.utility;
 using UnityEngine;
 using UnityEngine.Pool;
 
 namespace com.gdcbd.bossbattle.components
 {
-    public class ProjectileSpawner : PersistentMonoSingleton<ProjectileSpawner>
+    public abstract class ObjectSpawner<T> : PersistentMonoSingleton<ObjectSpawner<T>> where T : MonoBehaviour
     {
-        protected override void Initialize()
-        {
-        }
+        protected abstract GameObject Prefab { get; }
 
         public enum PoolType
         {
@@ -16,10 +15,9 @@ namespace com.gdcbd.bossbattle.components
             LinkedList
         }
 
-        public PoolType ProjectilePoolType;
+        public PoolType ObjectTypePool;
         public bool CollectionChecks = true;
         public int MaxPoolSize = 100;
-        [SerializeField] private GameObject _bulletPrefab;
 
         private IObjectPool<GameObject> _pool;
 
@@ -29,7 +27,7 @@ namespace com.gdcbd.bossbattle.components
             {
                 if (_pool == null)
                 {
-                    if (ProjectilePoolType == PoolType.Stack)
+                    if (ObjectTypePool == PoolType.Stack)
                         _pool = new ObjectPool<GameObject>(CreatePooledItem, OnTakeFromPool, OnReturnedToPool,
                             OnDestroyPoolObject, CollectionChecks, 10, MaxPoolSize);
                     else
@@ -43,27 +41,24 @@ namespace com.gdcbd.bossbattle.components
 
         private GameObject CreatePooledItem()
         {
-            var go = Instantiate(_bulletPrefab);
+            var go = Instantiate(Prefab);
             go.SetActive(false);
-            var returnToPool = go.AddComponent<ProjectilePool>(); // return bullets to the pool when they are disabled.
+            var returnToPool = go.AddComponent<PoolObject>();
             returnToPool.pool = Pool;
 
             return go;
         }
 
-        //  Release
         private void OnReturnedToPool(GameObject obj)
         {
             obj.SetActive(false);
         }
 
-        //  Get
         private void OnTakeFromPool(GameObject obj)
         {
             obj.SetActive(true);
         }
 
-        //pool capacity is reached, items returned will be destroyed.
         private void OnDestroyPoolObject(GameObject obj)
         {
             Destroy(obj);
