@@ -43,5 +43,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "chore: update semantic version to ${{ steps.semver-update.outputs.semver-number }}"
+          git commit -m "Updated semver via automated action."
           git push origin HEAD:${{ github.ref }}
