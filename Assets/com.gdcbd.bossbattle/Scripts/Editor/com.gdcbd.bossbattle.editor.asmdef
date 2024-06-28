@@ -1,0 +1,18 @@
+{
+    "name": "com.gdcbd.bossbattle.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a338d4867f41e2742a52013a0a9e5134"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

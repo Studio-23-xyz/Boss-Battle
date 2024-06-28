@@ -1,13 +1,11 @@
 using UnityEditor;
 using UnityEngine;
-using com.gdcbd.bossbattle;
 
 namespace com.gdcbd.bossbattle.editor
 {
     
-        [CustomEditor(typeof(TimeManager))]
-
-    public class TimeManagerEditor : Editor
+    [CustomEditor(typeof(TimeManager))]
+    public class TimeManagerEditor : UnityEditor.Editor
     {
         private GUIStyle headerStyle;
 
