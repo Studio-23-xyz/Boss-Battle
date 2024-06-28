@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/com.gdcbd.bossbattle/Scenes/ServiceScene.unity
+    guid: 3dfd48ab65a3d4b41b5a6b43c539489c
+  - enabled: 1
+    path: Assets/com.gdcbd.bossbattle/Scenes/SplashScreen.unity
+    guid: 85a58c3e1d8d84492918e57e75f3c93f
+  - enabled: 1
+    path: Assets/com.gdcbd.bossbattle/Scenes/MainMenue.unity
+    guid: efb6eae18ca2c4cd5b585fd68fb0a8c2
+  - enabled: 1
     path: Assets/com.gdcbd.bossbattle/Scenes/Boss 1 Scene.unity
     guid: f86b8c7fabff84c6b914d39788753df3
   m_configObjects:
