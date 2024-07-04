@@ -15,10 +15,22 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Bangla (bn)
   m_Data:
     m_SerializedData: []
-  m_GUID: 54b52353a6285443196dda55eda34e83
+  m_GUID: 9e40e67adf1ad47818829f9b46617cad
   m_SerializeEntries:
+  - m_GUID: 7b1b02a8b34ac4ffa9e419915bcab6fa
+    m_Address: DisclaimerTitle_bn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-bn
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4a12c028654a4497184207bf766d7488
     m_Address: SplashScreen_bn
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-bn
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 212c50459ac284c678e4def819161e4d
+    m_Address: MainMenue_StringTable_bn
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-bn
@@ -27,5 +39,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: f80931befa10d452cb3cf7b4e31d37c6, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: b584a45950d7e42a69102a1f13294e46, type: 2}
-    - {fileID: 11400000, guid: 5221f8fcf3e144831a3480f0e9c9f290, type: 2}
+    - {fileID: 11400000, guid: 4bea05817e56f444489e4da4fb5af3fc, type: 2}
+    - {fileID: 11400000, guid: 4f57728cb4b9041cb8e00d4de52a3fea, type: 2}

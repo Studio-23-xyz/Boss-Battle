@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+Assets/Settings/Fonts/NotoSansBengali-Regular[[:space:]]SDF.asset filter=lfs diff=lfs merge=lfs -text
+Assets/Settings/Fonts/InriaSerif-Regular[[:space:]]SDF.asset filter=lfs diff=lfs merge=lfs -text

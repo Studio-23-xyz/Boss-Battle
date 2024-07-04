@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_Data:
     m_SerializedData: []
-  m_GUID: 65c19c21f06bc40e3987a7a4fb414cf4
+  m_GUID: b10bdd219979743c28edd7c33087d877
   m_SerializeEntries:
   - m_GUID: c83d8fa975010490abedca42eac4df06
     m_Address: Bangla (bn)

@@ -15,16 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Asset-Tables-English (en)
   m_Data:
     m_SerializedData: []
-  m_GUID: 7075087e1e67a414c9f6cbb496e912eb
+  m_GUID: 082de9557d604424ba3495ee32fe86d9
   m_SerializeEntries:
-  - m_GUID: 35cd6dad587804bc290afd5ef1300b98
-    m_Address: LocalizationFont_en
+  - m_GUID: 4ebbb45f4de4c4fac8b20dfc40ccd0a7
+    m_Address: FONTS_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b82b99276c667448da6b83d86a3bd574
-    m_Address: Font Material_en
+  - m_GUID: 59819a2915ea44f3fb9cb5922c19c153
+    m_Address: Materials_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

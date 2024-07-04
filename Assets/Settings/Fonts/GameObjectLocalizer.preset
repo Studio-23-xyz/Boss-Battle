@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameObjectLocalizer
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TrackedObjects.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_TrackedObjects.Array.data[0]
+    value: 5353802860150128640
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640]
+    value: Unity.Localization UnityEngine.Localization.PropertyVariants.TrackedObjects.TrackedUGuiGraphic
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_Target
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_TrackedProperties.items.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_TrackedProperties.items.Array.data[0]
+    value: 8536057455729443108
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_TrackedProperties.items.Array.data[1]
+    value: 8536057455729443104
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_TrackedProperties.items.Array.data[2]
+    value: 8536057455729443106
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[5353802860150128640].m_UpdateType
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443104]
+    value: Unity.Localization UnityEngine.Localization.PropertyVariants.TrackedProperties.LocalizedAssetProperty
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443104].m_Localized
+    value: 8536057455729443105
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443104].m_PropertyPath
+    value: m_fontAsset
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105]
+    value: Unity.Localization UnityEngine.Localization.LocalizedTmpFont
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105].m_TableReference.m_TableCollectionName
+    value: GUID:8b0a4b8a97d6d4fcca81a3ec18254b8d
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105].m_TableEntryReference.m_KeyId
+    value: 90788847616
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105].m_TableEntryReference.m_Key
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105].m_FallbackState
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443105].m_WaitForCompletion
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443106]
+    value: Unity.Localization UnityEngine.Localization.PropertyVariants.TrackedProperties.LocalizedAssetProperty
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443106].m_Localized
+    value: 8536057455729443107
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443106].m_PropertyPath
+    value: m_sharedMaterial
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107]
+    value: Unity.Localization UnityEngine.Localization.LocalizedMaterial
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107].m_TableReference.m_TableCollectionName
+    value: GUID:f54e148b977ed4709b8a603d6907b994
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107].m_TableEntryReference.m_KeyId
+    value: 267125776384
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107].m_TableEntryReference.m_Key
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107].m_FallbackState
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443107].m_WaitForCompletion
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108]
+    value: Unity.Localization UnityEngine.Localization.PropertyVariants.TrackedProperties.FloatTrackedProperty
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_PropertyPath
+    value: m_fontSize
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_VariantData.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_VariantData.Array.data[0].localeIdentifier.m_Code
+    value: en
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_VariantData.Array.data[0].value
+    value: 70
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_VariantData.Array.data[1].localeIdentifier.m_Code
+    value: bn
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: managedReferences[8536057455729443108].m_VariantData.Array.data[1].value
+    value: 70
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []

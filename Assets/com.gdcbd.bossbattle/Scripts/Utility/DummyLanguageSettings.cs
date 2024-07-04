@@ -13,7 +13,13 @@ namespace com.gdcbd.bossbattle.utility
         [SerializeField] private GameObject _subtitleObject;
         [SerializeField] public AccessibilityLanguage _defaultLanguage;
         public UnityEvent<int> LanguageChanged;
-       
+
+        public int SelectLanguageKey  ;
+
+        private void Start()
+        {
+            UpdateLanguage(SelectLanguageKey);
+        }
 
         public async UniTask Initialize(int showSubtitle, int languageId)
         {

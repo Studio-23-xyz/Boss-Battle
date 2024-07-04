@@ -15,20 +15,35 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_Data:
     m_SerializedData: []
-  m_GUID: 851154d38d3e24562930af7f03f07076
+  m_GUID: b301c5261378746b7a5e6d405494d2d0
   m_SerializeEntries:
+  - m_GUID: 1899ef7b55ca343bca3c365197f2cbcf
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/Font_2/FONTS Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8cd3173759057472898145c3b27aa3cf
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/Material_2/Materials
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8a7130da88c940769c53a584f08e632
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/1_SplashScreen_StringTable/DisclaimerTitle/DisclaimerTitle
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 180ab62af49f742dd9e2177c903a8574
-    m_Address: Assets/X user/Data/Localization/SplashScreen Shared Data.asset
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/1_SplashScreen_StringTable/SplashScreen
+      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8b0a4b8a97d6d4fcca81a3ec18254b8d
-    m_Address: Assets/X user/Data/Localization/LocalizationFont Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f54e148b977ed4709b8a603d6907b994
-    m_Address: Assets/X user/Data/Localization/Font Material Shared Data.asset
+  - m_GUID: 0a1dd6acfb25842b898b81fb3201f948
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_MainMenu_StringTable/MainMenue_StringTable
+      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

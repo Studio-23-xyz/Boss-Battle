@@ -28,15 +28,15 @@ namespace com.gdcbd.bossbattle.player
 
         public void Hurt()
         {
-            _bodySpriteRenderer.DOColor(Color.red, 0.1f).OnComplete(() => { _bodySpriteRenderer.DOColor(originalColor, 0.1f); });
+           // _bodySpriteRenderer.DOColor(Color.red, 0.1f).OnComplete(() => { _bodySpriteRenderer.DOColor(originalColor, 0.1f); });
         }
 
         public void PowerUP()
         {
-            _bodySpriteRenderer.DOColor(Color.green, 0.1f).OnComplete(() =>
-            {
-                _bodySpriteRenderer.DOColor(originalColor, 0.1f);
-            });
+          //  _bodySpriteRenderer.DOColor(Color.green, 0.1f).OnComplete(() =>
+           // {
+           //     _bodySpriteRenderer.DOColor(originalColor, 0.1f);
+          //  });
         }
 
         public void Crouch()
