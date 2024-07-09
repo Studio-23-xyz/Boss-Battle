@@ -47,6 +47,48 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c6c45a13cb6247b3afc16b3fa3fd26e
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/Settings
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c0eab80835de4d51b1ab5d51078b53c
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/VSyncLocalization/New
+      Table Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0bc852363f6bf460585353be277e4f40
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/InputAction/InputActionLocalization
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b540a3e61a7940659994214de84a5c3
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/Language/LanguageLocalization
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a73d4bb6690546bfb6fa2d22134350c
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/ScreenMode/ScreenModeLocalization
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d5633ca3819b4d2d9781600b892cb62
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/Toggle/ToggleLocalizer
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b99035a021ba49df8cd5e6c9af2655a
+    m_Address: Assets/com.gdcbd.bossbattle/LocalizationAssets/2_Settings_StringTable/InputMethod/InputMethod
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: f80931befa10d452cb3cf7b4e31d37c6, type: 2}
   m_SchemaSet:

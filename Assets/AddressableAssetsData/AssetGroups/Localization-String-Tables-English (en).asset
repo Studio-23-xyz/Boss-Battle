@@ -30,7 +30,49 @@ MonoBehaviour:
     - Locale-en
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a7bfbe4381d954f8b9e9b972fff19e2d
-    m_Address: MainMenue_StringTable_en
+    m_Address: MainMenu_StringTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df7087bf5c94e4de5b88f1ce1f26a350
+    m_Address: Settings_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b8051866a5094922b3a6d402ff6f0b9
+    m_Address: VSyncLocalizaton_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 739020460f2b0432397dfabc56940ab1
+    m_Address: InputActionLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51772f9b4225a469993e40cae35dfc6f
+    m_Address: LanguageLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 983d29ce8615649fb9997b57136910df
+    m_Address: ScreenModeLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea1018afd2c0844fca9308cb8fa48440
+    m_Address: ToggleLocalizer_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 154de435303ba41a1a14062b86a9a9f8
+    m_Address: InputMethod_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

@@ -395,50 +395,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be19e409e1fca4664b744f0ae89494dc, type: 3}
---- !u!1 &106090179
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 106090180}
-  - component: {fileID: 106090181}
-  m_Layer: 0
-  m_Name: Time Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &106090180
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106090179}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 711255630}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &106090181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106090179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2a2d7dd16f1d4fd59e8149ea4a4508e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &114619616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3126339544678925824, guid: 3894f5a5a7d6e4c56b7d3f73af5e36ba, type: 3}
@@ -1557,7 +1513,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1066450254}
-  - {fileID: 106090180}
   - {fileID: 746588984}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2241,28 +2196,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066450254}
-  - component: {fileID: 1066450253}
   - component: {fileID: 1066450255}
   m_Layer: 0
-  m_Name: InputManager
+  m_Name: InputHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1066450253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066450252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bec2704a5e6bd450bb460f6a68211fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerInput: {fileID: 1066450255}
 --- !u!4 &1066450254
 Transform:
   m_ObjectHideFlags: 0
@@ -2287,227 +2228,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066450252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 84b8f8f4c54ee4adeb3867f89c91519a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ea6af263b48f14eee9726bf2edd6e09e, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: InputManager, com.gdcbd.bossbattle
-        m_MethodName: GetMovementInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1252d299-7b49-4d7c-a87d-31559a07eaa1
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: InputManager, com.gdcbd.bossbattle
-        m_MethodName: OnFireAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d9713be5-b77e-4634-9ae3-340c28189ef4
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: InputManager, com.gdcbd.bossbattle
-        m_MethodName: OnJumpAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b5acf249-f8f5-4990-a016-cfb3a5c5f472
-    m_ActionName: Player/Jump[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: InputManager, com.gdcbd.bossbattle
-        m_MethodName: OnSprintAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 3a31f93b-ff40-480c-bdfd-be8a0c8e9554
-    m_ActionName: Player/Sprint[/Keyboard/leftShift]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: InputManager, com.gdcbd.bossbattle
-        m_MethodName: OnDashAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cf83613b-3993-487e-b130-48151d81fff3
-    m_ActionName: Player/Dash[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066450253}
-        m_TargetAssemblyTypeName: com.gdcbd.bossbattle.InputManager, com.gdcbd.bossbattle
-        m_MethodName: OnCrouchAction
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: f9dc1fcd-66cf-408b-b3e7-8c74fa0020e0
-    m_ActionName: Player/Crouch[/Keyboard/c]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6153c75d-809d-47ea-ac9c-392771b8fdff
-    m_ActionName: UI/CloseUI[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0a3f7987-ea9e-45ec-8bf5-26f93a1526b7
-    m_ActionName: UI/ClearSave[/Keyboard/l]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68e3b7b5-e9b2-4946-9255-78ad89359ae0
-    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c195c03a-aa41-4231-9026-1d88eb367859
-    m_ActionName: UI/Apply[/Keyboard/space,/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 72118697-f193-4133-8003-48ee0c748a74
-    m_ActionName: UI/HoldApply[/Keyboard/space,/Keyboard/enter]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 8325305b-fd09-4688-a6e8-8881f4923f6a
-    m_ActionName: UI/Back[/Mouse/rightButton,/Keyboard/backspace]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 77584dce-09f2-4658-99a8-f77d2d79314e
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 96ec9159-3a82-4a18-908c-110e837d5022
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f0ebbd20-4ea0-49dd-94ec-7a6670e39030
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 911c45f1-480a-40d3-8f89-7987005fde2b
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3dfae27e-7cbb-49f6-afec-8019cf2aa45a
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a2f88d3f-d338-47ee-92a0-4696e7dd7796
-    m_ActionName: UI/Right Option[/Keyboard/rightArrow,/Keyboard/d]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f923c49c-2a2f-4bf3-82f1-94482a383870
-    m_ActionName: UI/Left Option[/Keyboard/leftArrow,/Keyboard/a]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f82fa2df-8f14-4314-a036-d90b6e64b790
-    m_ActionName: UI/SkipScene[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 91d39a6d-bdd1-46d3-80f0-5c107219a64f
-    m_ActionName: UI/CursorPosition[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5476932d-f89a-4659-9871-a735c7a2458e
-    m_ActionName: UI/Tab Left[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 19b0c50a-9e48-46f0-8a0b-4d06aedd63ba
-    m_ActionName: UI/Tab Right[/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b1afc4f1-f68d-4b08-a1b7-4d55ce795f6f
-    m_ActionName: UI/Slider[/Keyboard/rightArrow,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/a]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 93b4a11c-612e-430b-af0a-c418629d7adf
-    m_ActionName: UI/Close Journal[/Keyboard/tab]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ae088749-faf0-403b-8ab5-a177f4187988
-    m_ActionName: UI/Close[/Keyboard/escape]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cfbf37fa-06bf-4467-9000-f45cd6d02bb4
-    m_ActionName: UI/Next[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 06ba9e26-3038-4f4e-a2a8-787532e864aa
-    m_ActionName: UI/Skip[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bbb8011b-3fad-4bfb-b211-7b74123129c6
-    m_ActionName: UI/Hold Reset[/Keyboard/r]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 401ef57f-7b1c-4ebd-a254-5dde42bf0ee5
-    m_ActionName: UI/Play[/Keyboard/space]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 17698bde-6390-4d2d-9fa8-e44d53f303e3
-    m_ActionName: UI/Slider up/down[/Keyboard/z,/Keyboard/c]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3857dc1f-0ea1-4647-9546-c399bc56ba77
-    m_ActionName: UI/Scroll[/Keyboard/z,/Keyboard/c]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: KeyboardMouse
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  _inputMapSetOnStart: 0
 --- !u!1001 &1100085394
 PrefabInstance:
   m_ObjectHideFlags: 0

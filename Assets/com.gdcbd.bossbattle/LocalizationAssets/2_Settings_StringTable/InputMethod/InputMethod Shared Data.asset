@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: InputMethod Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: InputMethod
+  m_TableCollectionNameGuidString: 6b99035a021ba49df8cd5e6c9af2655a
+  m_Entries:
+  - m_Id: 7776481280
+    m_Key: KeyBoard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26369830912
+    m_Key: Gamepad
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8536057608123187233
+  references:
+    version: 2
+    RefIds:
+    - rid: 8536057608123187233
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1720444323196

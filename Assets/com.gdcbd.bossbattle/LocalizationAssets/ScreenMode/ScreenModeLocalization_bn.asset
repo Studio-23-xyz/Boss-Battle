@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ScreenModeLocalization_bn
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: bn
+  m_SharedData: {fileID: 11400000, guid: 2a73d4bb6690546bfb6fa2d22134350c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 5247315968
+    m_Localized: "\u0985\u09B0\u09CD\u09A7 \u099C\u09BE\u09A8\u09BE\u09B2\u09BE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 339604647936
+    m_Localized: "\u09B8\u09AE\u09CD\u09AA\u09C2\u09B0\u09CD\u09A3 \u099C\u09BE\u09A8\u09BE\u09B2\u09BE"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 372823535616
+    m_Localized: "\u09AC\u09BF\u09B6\u09C7\u09B7 \u099C\u09BE\u09A8\u09BE\u09B2\u09BE"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
