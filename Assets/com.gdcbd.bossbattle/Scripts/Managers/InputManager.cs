@@ -13,6 +13,7 @@ namespace com.gdcbd.bossbattle
         private Vector2 _moveInput;
 
         public delegate void OnActionEvent();
+        public delegate void OnActionMapEvent(InputMaps actionMap);
 
         public OnActionEvent MovePressedAction;
         public OnActionEvent MoveReleaseAction;
@@ -31,7 +32,9 @@ namespace com.gdcbd.bossbattle
 
         public OnActionEvent CrouchPressedAction;
         public OnActionEvent CrouchReleasedAction;
-
+       
+        public OnActionMapEvent OnActionMapChanged;
+        private InputMaps _currentActionMap;
         protected override void Initialize()
         {
         }
@@ -94,5 +97,67 @@ namespace com.gdcbd.bossbattle
             else if (context.canceled)
                 CrouchReleasedAction?.Invoke();
         }
+         
+
+       
+        
+        #region UI_Settings
+        public OnActionEvent OnHoldSubmitActionCompleted;
+        public OnActionEvent OnHoldResetActionCompleted;
+        public OnActionEvent OptionLeft;
+        public OnActionEvent OptionRight;
+        public OnActionEvent OptionBack;
+        public OnActionEvent OptionSubmit;
+        private float _sliderValue;
+        public void OnLeftAction(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OptionLeft?.Invoke();
+            
+        }
+        public void OnRightAction(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OptionRight?.Invoke();
+          
+        }
+        public void OnBackAction(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OptionBack?.Invoke();
+            
+        }
+        public void OnSubmitAction(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+                OptionSubmit?.Invoke();
+            
+        }
+        public void OnSliderButtonInfo(InputAction.CallbackContext callbackContext)
+        {
+            _sliderValue = callbackContext.ReadValue<float>();
+        }
+        public float GetSliderValue()
+        {
+            return _sliderValue;
+        }
+        
+        #endregion
+       
+        public void ChangeInputMap(InputMaps actionMap)
+        {
+            _currentActionMap = actionMap;
+            playerInput.SwitchCurrentActionMap(actionMap.ToString());
+            OnActionMapChanged?.Invoke(_currentActionMap);
+            Debug.Log($"Action Map switch to : {_currentActionMap.ToString()}");
+        }
+        
+    }
+    public enum InputMaps
+    {
+        Player,
+        UI,
+        Interaction,
+        Cheat
     }
 }

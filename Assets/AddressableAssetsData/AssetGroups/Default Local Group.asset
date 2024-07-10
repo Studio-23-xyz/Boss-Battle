@@ -15,8 +15,28 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_Data:
     m_SerializedData: []
-  m_GUID: 18180d329d0be4c6d9331f3774d66729
-  m_SerializeEntries: []
+  m_GUID: 0dd6eb8fab18242f8b5805bd142aa5f0
+  m_SerializeEntries:
+  - m_GUID: f86b8c7fabff84c6b914d39788753df3
+    m_Address: Assets/com.gdcbd.bossbattle/Scenes/Boss 1 Scene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efb6eae18ca2c4cd5b585fd68fb0a8c2
+    m_Address: Assets/com.gdcbd.bossbattle/Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 85a58c3e1d8d84492918e57e75f3c93f
+    m_Address: Assets/com.gdcbd.bossbattle/Scenes/SplashScreen.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5b41028f929f6f4ea3338fa9f2826b8
+    m_Address: Assets/Settings/Fonts/NotoSansBengali-Regular SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: f80931befa10d452cb3cf7b4e31d37c6, type: 2}
   m_SchemaSet:

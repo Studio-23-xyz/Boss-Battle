@@ -8,15 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/com.gdcbd.bossbattle/Scenes/ServiceScene.unity
     guid: 3dfd48ab65a3d4b41b5a6b43c539489c
-  - enabled: 1
+  - enabled: 0
     path: Assets/com.gdcbd.bossbattle/Scenes/SplashScreen.unity
     guid: 85a58c3e1d8d84492918e57e75f3c93f
-  - enabled: 1
-    path: Assets/com.gdcbd.bossbattle/Scenes/MainMenue.unity
+  - enabled: 0
+    path: Assets/com.gdcbd.bossbattle/Scenes/MainMenu.unity
     guid: efb6eae18ca2c4cd5b585fd68fb0a8c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/com.gdcbd.bossbattle/Scenes/Boss 1 Scene.unity
     guid: f86b8c7fabff84c6b914d39788753df3
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 6c306bb9c58f94c7abae4869910f5e5a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ea6af263b48f14eee9726bf2edd6e09e, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: b40709eee05aa4b2290ca0c7bfc46e7a, type: 2}

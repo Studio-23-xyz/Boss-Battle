@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: InputActionLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: InputActionLocalization
+  m_TableCollectionNameGuidString: 0bc852363f6bf460585353be277e4f40
+  m_Entries:
+  - m_Id: 7696789504
+    m_Key: Apply
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23425429504
+    m_Key: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72347791360
+    m_Key: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91536732160
+    m_Key: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111203823616
+    m_Key: Left Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139049807872
+    m_Key: Right Option
+    m_Metadata:
+      m_Items: []
+  - m_Id: 171530498048
+    m_Key: Slider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1860671046397952
+    m_Key: Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1861419649970176
+    m_Key: Load
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1861933976498176
+    m_Key: Press
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1862006214995968
+    m_Key: Hold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2226644096745472
+    m_Key: Scroll
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2227589971017728
+    m_Key: Navigate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2228413535191040
+    m_Key: Close Journal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2621285195415552
+    m_Key: Auto
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8536057608123187228
+  references:
+    version: 2
+    RefIds:
+    - rid: 8536057608123187228
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1720443156495

@@ -1,0 +1,224 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Settings Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Settings
+  m_TableCollectionNameGuidString: 8c6c45a13cb6247b3afc16b3fa3fd26e
+  m_Entries:
+  - m_Id: 9726832640
+    m_Key: UI/Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35728096735232
+    m_Key: UI/New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36809337974784
+    m_Key: UI/Load Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36880167186432
+    m_Key: UI/Extra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36970965479424
+    m_Key: UI/Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 49855523434496
+    m_Key: UI/Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 335427676647424
+    m_Key: Press any key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353457559285760
+    m_Key: Display
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353540170297344
+    m_Key: Graphics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353590799740928
+    m_Key: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353620461858816
+    m_Key: Controls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 353644415528960
+    m_Key: Accessibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374676836823040
+    m_Key: Credit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374783770603520
+    m_Key: Collectable Items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374817853517824
+    m_Key: Concept Arts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378204007411712
+    m_Key: Screen mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 410633531273216
+    m_Key: V-Sync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 426873507262464
+    m_Key: Brightness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427136091664384
+    m_Key: Render Scale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 427182765879296
+    m_Key: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730388121235456
+    m_Key: Bloom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 730408258088960
+    m_Key: Ambient Occulsion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732108624736256
+    m_Key: Master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732135329869824
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732164216041472
+    m_Key: SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 732190795345920
+    m_Key: VO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733699377442816
+    m_Key: Mouse Sensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733722962014208
+    m_Key: Input Method
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733741815410688
+    m_Key: ControllerSensitivity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733759267909632
+    m_Key: InvertX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 733779530592256
+    m_Key: InvertY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735568317362176
+    m_Key: Camera FOV
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735624382623744
+    m_Key: Camera Shake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735655751823360
+    m_Key: Toggle Subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735708696522752
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 742872047661056
+    m_Key: Saved Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 757415519956992
+    m_Key: Save slot data
+    m_Metadata:
+      m_Items: []
+  - m_Id: 761614605463552
+    m_Key: Empty Slot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 791669037576192
+    m_Key: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 791683830886400
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3255123768160256
+    m_Key: Prev
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3255910594424832
+    m_Key: Match Line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3258866198818816
+    m_Key: Pick/Place Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3259377216040960
+    m_Key: select position
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3281109222076416
+    m_Key: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3281262620356608
+    m_Key: Hold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4004885653860352
+    m_Key: Tap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4697391076978688
+    m_Key: Computer Loading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8332642876768256
+    m_Key: Select
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8536057608123187210
+  references:
+    version: 2
+    RefIds:
+    - rid: 8536057608123187210
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1720433020361

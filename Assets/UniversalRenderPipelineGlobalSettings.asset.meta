@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/UniversalRenderPipelineGlobalSettings.asset.meta
+guid: 59c4a6a957a1445528c765224e910847
+========
+guid: f8a7130da88c940769c53a584f08e632
+>>>>>>>> feature:Assets/com.gdcbd.bossbattle/LocalizationAssets/1_SplashScreen_StringTable/DisclaimerTitle/DisclaimerTitle Shared Data.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

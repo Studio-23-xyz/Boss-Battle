@@ -15,10 +15,64 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_Data:
     m_SerializedData: []
-  m_GUID: e36963ab0f3604a8f96fb80781d346e5
+  m_GUID: 8d9082f5430f44e75b59222369c2a111
   m_SerializeEntries:
+  - m_GUID: da122aa530a624c228e44b5eda08431b
+    m_Address: DisclaimerTitle_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0c1912d7f940f405fb44ca5d316b8563
     m_Address: SplashScreen_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7bfbe4381d954f8b9e9b972fff19e2d
+    m_Address: MainMenu_StringTable_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df7087bf5c94e4de5b88f1ce1f26a350
+    m_Address: Settings_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b8051866a5094922b3a6d402ff6f0b9
+    m_Address: VSyncLocalizaton_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 739020460f2b0432397dfabc56940ab1
+    m_Address: InputActionLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51772f9b4225a469993e40cae35dfc6f
+    m_Address: LanguageLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 983d29ce8615649fb9997b57136910df
+    m_Address: ScreenModeLocalization_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea1018afd2c0844fca9308cb8fa48440
+    m_Address: ToggleLocalizer_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 154de435303ba41a1a14062b86a9a9f8
+    m_Address: InputMethod_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -27,5 +81,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: f80931befa10d452cb3cf7b4e31d37c6, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 284f3ecced04f443c8c05617a0f4e37d, type: 2}
-    - {fileID: 11400000, guid: 6919b00dae2ed49aa891993a34f953b3, type: 2}
+    - {fileID: 11400000, guid: dbaabec28821c41fcaed183fe6c18ba3, type: 2}
+    - {fileID: 11400000, guid: 5539e2a7b36fc48d8952365f32d1fb8a, type: 2}

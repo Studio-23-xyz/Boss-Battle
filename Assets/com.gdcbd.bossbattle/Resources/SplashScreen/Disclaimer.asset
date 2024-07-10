@@ -13,15 +13,31 @@ MonoBehaviour:
   m_Name: Disclaimer
   m_EditorClassIdentifier: 
   IsInteractable: 0
-  Title: Disclaimer
-  Description: Boss Battle is an open-source game project developed and maintained
-    by contributors from around the world. This project is provided for educational
-    and entertainment purposes only. By using, downloading, or contributing to this
-    project, you acknowledge and agree to the terms of this disclaimer.
+  Title:
+    m_TableReference:
+      m_TableCollectionName: GUID:180ab62af49f742dd9e2177c903a8574
+    m_TableEntryReference:
+      m_KeyId: 3265006454956032
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Description:
+    m_TableReference:
+      m_TableCollectionName: GUID:180ab62af49f742dd9e2177c903a8574
+    m_TableEntryReference:
+      m_KeyId: 2539944693194752
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   ShowButton: 0
   TitleFontData:
-    FontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    FontAsset: {fileID: 0}
     FontStyle: 0
   DescriptionFontData:
-    FontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    FontAsset: {fileID: 0}
     FontStyle: 0
+  references:
+    version: 2
+    RefIds: []

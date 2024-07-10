@@ -11,9 +11,15 @@
 /[Uu]ser[Ss]ettings/
 /[Cc]ode[Cc]overage/
 
+# Ignore Mac DS_Store files
+.DS_Store
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
+
+# No need to push buildreports from analysis
+/[Aa]ssets/BuildReports
 
 # Recordings can get excessive in size
 /[Rr]ecordings/
@@ -100,5 +106,4 @@ Assets/Gemserk.SelectionHistory.asset
 Assets/Gemserk.SelectionHistory.asset.meta
 Assets/Gemserk.Favorites.asset
 Assets/Gemserk.Favorites.asset.meta
-Assets/3rdParty/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Data/Palettes/PWB_88DB4F53CC8E6BB0.meta
-Assets/3rdParty/PluginMaster/DesignTools/Editor/PrefabWorldBuilder/Resources/Data/Palettes/PWB_88DB4F53CC8E6BB0/
+ProjectSettings/Packages/com.unity.probuilder/Settings.json

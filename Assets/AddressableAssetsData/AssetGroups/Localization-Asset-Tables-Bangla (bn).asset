@@ -15,16 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Asset-Tables-Bangla (bn)
   m_Data:
     m_SerializedData: []
-  m_GUID: 9b54711dbe4a343d483631d89c1530c4
+  m_GUID: bdffc6c0dc60946f4b0fe07c79341a23
   m_SerializeEntries:
-  - m_GUID: 59b9c279d911743a891a0b5f2560c416
-    m_Address: LocalizationFont_bn
+  - m_GUID: 4a185cbcae1c4441992ebb4338ca5d96
+    m_Address: FONTS_bn
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-bn
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7d1da8e0a0f01420ea7a971e9f9d0ab5
-    m_Address: Font Material_bn
+  - m_GUID: 61ac5031500d244d5ae43dc89f172cd8
+    m_Address: Materials_bn
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-bn
