@@ -503,12 +503,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "file:/Users/macbook/Desktop/com.unity.textmeshpro-3.2.0-pre.10",
+      "version": "3.2.0-pre.10",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0"
-      }
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
       "version": "1.8.6",
