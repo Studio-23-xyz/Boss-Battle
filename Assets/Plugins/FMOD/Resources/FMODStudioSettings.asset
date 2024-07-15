@@ -290,11 +290,11 @@ MonoBehaviour:
   displaySortOrder: 0
   childIdentifiers:
   - b7716510a1f36934c87976f3a81dbf3d
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - 46fbfdf3fc43db0458918377fd40293e
   - 0f8eb3f400726694eb47beb1a9f94ce8
   - c88d16e5272a4e241b0ef0ac2e53b73d
   - 52eb9df5db46521439908db3a29a1bbb
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - 46fbfdf3fc43db0458918377fd40293e
   - de700ef3f37a49b58a57ae3addf01ad9
   - e7a046c753c3c3d4aacc91f6597f310d
   - fd7c55dab0fce234b8c25f6ffca523c1
@@ -388,10 +388,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: 
+  sourceBankPath: Assets/com.gdcbd.bossbattle/Sound/Build/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -412,8 +412,12 @@ MonoBehaviour:
   VirtualChannelSettings: []
   RealChannelSettings: []
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  Banks:
+  - Music
+  - SFX
+  - Voice
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -430,16 +434,16 @@ MonoBehaviour:
   LastEventReferenceScanVersion: 131617
   Platforms:
   - {fileID: -6811891109252856231}
-  - {fileID: -6014095896794093441}
-  - {fileID: 44898498382325051}
-  - {fileID: 522934009903708336}
-  - {fileID: 6962110888781665354}
   - {fileID: -6601153312609449201}
   - {fileID: -6466111533491241046}
+  - {fileID: -6014095896794093441}
   - {fileID: -3095665958591149996}
+  - {fileID: 44898498382325051}
+  - {fileID: 522934009903708336}
   - {fileID: 1604912605217234404}
   - {fileID: 1971243461896093568}
   - {fileID: 2525900473013926571}
+  - {fileID: 6962110888781665354}
   - {fileID: 8173273688514586781}
   MigratedPlatforms: 0a000000150000000800000002000000010000000b00000006000000090000000000000012000000050000000c000000
 --- !u!114 &44898498382325051

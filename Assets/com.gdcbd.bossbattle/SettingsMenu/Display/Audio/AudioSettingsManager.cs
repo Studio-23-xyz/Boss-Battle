@@ -29,10 +29,10 @@ namespace Studio23.SS2
         public void Initialize()
         {
             _audioSettingsData = GetComponent<AudioSettingsSaver>().GetCurrentData();
-           // MasterSetting.Initialize(FMODVCAList.Master, _audioSettingsData.MasterVolume);
-           // MusicSetting.Initialize(FMODVCAList.Music, _audioSettingsData.MusicVolume);
-           // SFXSetting.Initialize(FMODVCAList.SFX, _audioSettingsData.SfxVolume);
-           // VOSetting.Initialize(FMODVCAList.VO, _audioSettingsData.VoVolume);
+            MasterSetting.Initialize(FMODVCAList.Master, _audioSettingsData.MasterVolume);
+            MusicSetting.Initialize(FMODVCAList.Music, _audioSettingsData.MusicVolume);
+            SFXSetting.Initialize(FMODVCAList.SFX, _audioSettingsData.SfxVolume);
+            VOSetting.Initialize(FMODVCAList.VO, _audioSettingsData.VoVolume);
         }
 
         public AudioSettingsData GenerateDefaultAudioSettingsData()
